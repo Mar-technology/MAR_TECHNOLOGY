@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mar-technology.github.io/MAR_TECHNOLOGY/sitemap.xml
