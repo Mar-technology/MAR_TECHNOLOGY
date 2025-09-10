@@ -33,7 +33,6 @@ header {
 }
 
 header h1 {
-  /* CAMBIO: Se ocultó el h1 del encabezado */
   display: none;
 }
 
@@ -78,7 +77,7 @@ nav a:hover {
 .héroe h2 {
   font-size: 2.2em;
   margin-bottom: 15px;
-  color: var(--color-secundario); /* CAMBIO: color dorado */
+  color: var(--color-secundario);
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
@@ -196,18 +195,11 @@ footer {
 /* ===== SERVICIOS - CAJAS LUMINOSAS JUNTAS ===== */
 .servicios {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Siempre 4 columnas iguales */
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
-}
-
-@media (max-width: 600px) {
-  .servicios {
-    overflow-x: auto;
-    grid-template-columns: repeat(4, 250px); /* Ancho fijo para scroll horizontal */
-  }
 }
 
 .servicio {
@@ -241,4 +233,61 @@ footer {
   color: #555;
   font-weight: 500;
   line-height: 1.4;
+}
+
+/* --- */
+
+/* ===== DISEÑO RESPONSIVO PARA MÓVILES ===== */
+@media (max-width: 768px) {
+  /* Encabezado y navegación */
+  header {
+    padding: 15px;
+  }
+
+  .logo-contenedor h1 {
+    font-size: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* Héroe */
+  .héroe {
+    padding: 40px 15px;
+    margin: 15px auto;
+  }
+
+  .héroe h2 {
+    font-size: 1.8em;
+  }
+
+  .héroe p {
+    font-size: 0.9em;
+  }
+
+  /* Secciones y galería */
+  section {
+    padding: 20px 15px;
+  }
+
+  .productos .galeria {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  /* Servicios */
+  .servicios {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+  
+  /* Pie de página */
+  footer {
+    padding: 15px;
+  }
 }
